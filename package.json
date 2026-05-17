@@ -1,0 +1,14 @@
+{
+  "name": "english-platform",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter client dev\" \"pnpm --filter server dev\"",
+    "build": "pnpm --filter client build && pnpm --filter server build",
+    "server": "pnpm --filter server dev",
+    "client": "pnpm --filter client dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

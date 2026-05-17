@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-surface-0: #0a0a0a;
+  --color-surface-1: #141414;
+  --color-surface-2: #1a1a1a;
+  --color-surface-3: #252525;
+  --color-border: #333333;
+  --color-text-primary: #f5f5f7;
+  --color-text-secondary: #98989d;
+  --color-accent: #0071e3;
+  --color-accent-hover: #0077ed;
+  --color-success: #30d158;
+  --color-error: #ff453a;
+  --color-warning: #ffd60a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface-0 text-text-primary antialiased;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.dark body {
+  @apply bg-surface-0 text-text-primary;
+}
+
+.light body {
+  @apply bg-white text-[#1d1d1f];
+}
